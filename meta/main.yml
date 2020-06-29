@@ -1,0 +1,25 @@
+galaxy_info:
+  role_name: posteio
+  author: Santiago Alessandri
+  description: Mail server using poste.io free version
+
+  license: MIT
+
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Archlinux
+      versions:
+        - all
+
+  galaxy_tags:
+    - mail
+    - system
+    - posteio
+    - docker

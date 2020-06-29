@@ -1,0 +1,24 @@
+---
+  - name: 'Create poste.io data folder'
+    file:
+      path: '{{ posteio__data_dir }}'
+      state: directory
+
+  - name: 'Setup poste.io docker container'
+    docker_container:
+      image: analogic/poste.io:{{ posteio__version }}
+      name: '{{ posteio__container_name }}'
+      hostname: '{{ posteio__hostname }}'
+      state: started
+      restart_policy: unless-stopped
+      network_mode: host
+      mounts:
+        - source: '{{ posteio__data_dir }}'
+          target: /data
+          type: bind
+          read_only: no
+      env:
+        TZ: '{{ posteio__timezone }}'
+        DISABLE_CLAMAV: '{{ "TRUE" if not posteio__clamav else omit }}'
+        DISABLE_RSPAMD: '{{ "TRUE" if not posteio__rspamd else omit }}'
+        DISABLE_ROUNDCUBE: '{{ "TRUE" if not posteio__roundcube else omit }}'

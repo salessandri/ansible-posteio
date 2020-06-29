@@ -1,0 +1,8 @@
+---
+  posteio__version: 2.2.21
+  posteio__container_name: posteio-mailserver
+  posteio__timezone: UTC
+  posteio__data_dir: /var/posteio/
+  posteio__clamav: yes
+  posteio__rspamd: yes
+  posteio__roundcube: yes
