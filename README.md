@@ -16,7 +16,7 @@ Only the _host_ networking mode is supported for the time being, thus the follow
 
 ## Role Variables
 
- - **`posteio__version`** (optional, default: _2.3.6_): Image version tag to use.
+ - **`posteio__version`** (optional, default: _2.3.7_): Image version tag to use.
  - **`posteio__container_name`** (optional, default: _posteio-mailserver_): Name to use for the container created by the role.
  - **`posteio__timezone`** (optional, default: _UTC_): Timezone to configure on the mailserver. Valid options can be found in [this Wikipedia article](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
  - **`posteio__data_dir`** (optional, default _/var/posteio/_): Folder to use for storing the persistent files.
