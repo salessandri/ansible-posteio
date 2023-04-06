@@ -1,4 +1,4 @@
-posteio__version: 2.3.10
+posteio__version: 2.3.11
 posteio__container_name: posteio-mailserver
 posteio__timezone: UTC
 posteio__data_dir: /var/posteio/
