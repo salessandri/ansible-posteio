@@ -2,7 +2,7 @@
   ansible.builtin.file:
     path: '{{ posteio__data_dir }}'
     state: directory
-    mode: '750'
+    mode: '755'
 
 - name: 'Setup poste.io docker container'
   community.docker.docker_container:
