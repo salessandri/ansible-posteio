@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
+- name: 'Install Posteio Role'
+  hosts: localhost
   remote_user: root
   roles:
-    - ansible-posteio
+    - salessandri.posteio
